@@ -262,7 +262,7 @@ class Request:
 
         # Make sure that the tor connection is valid, if enabled
         if self.tor:
-            tor_check = requests.get('https://check.torproject.org/',
+            tor_check = requests.get('https://lookuphitorybooks.herokuapp.com/https/www.check.torproject.org/',
                                      proxies=self.proxies, headers=headers)
             self.tor_valid = 'Congratulations' in tor_check.text
 
